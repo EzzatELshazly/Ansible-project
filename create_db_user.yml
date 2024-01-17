@@ -9,7 +9,7 @@
   vars:
     mysql_root_password: "123456"
     mysql_db_name: "ivolve_database"
-    mysql_db_user: "ivolve_user"
+    mysql_db_user: "ezzatelshazly"
 
   tasks:
     - name: Install MySQL client and server
@@ -26,7 +26,14 @@
         state: started
         enabled: yes
 
-    - name: Create MySQL user
+    - name: Create MySQL database
+      mysql_db:
+        name: "{{ mysql_db_name }}"
+        state: present
+        login_user: root
+        login_password: "{{ mysql_root_password }}"
+    
+    - name: Create MySQL user using encrypted password
       command: >
         mysql -u root -p'{{ mysql_root_password }}' -e
         "CREATE USER '{{ mysql_db_user }}'@'localhost' IDENTIFIED BY '{{ mysql_db_password }}'; GRANT ALL PRIVILEGES ON {{ mysql_db_name }}.* TO '{{ mysql_db_user }}'@'localhost';"
