@@ -13,20 +13,20 @@ Follow these steps to get started with the Ansible Project:
 
 Install Ansible Package:
 $ yum install ansible
+
 Create Inventory:
 Create an inventory containing the list of managed hosts/machines.
 
 Run Ansible Playbook:
 Execute the Ansible playbook for web server configuration.
-
 $ ansible-playbook web_server_playbook
+
 Ansible Vault: Encrypt Sensitive Data:
 Create an Ansible Vault to encrypt sensitive data, such as a database password.
-
 $ ansible-vault encrypt_string --vault-id vault.txt 'string-to-encrypt' --name 'variable_name'
+
 Run Ansible Playbook with Encrypted Variables:
 Run a playbook containing encrypted variables, prompting the user to enter the vault password interactively.
-
 $ ansible-playbook --ask-vault-pass vault.yml
 
 Conclusion
