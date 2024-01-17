@@ -1,9 +1,13 @@
 # Ansible-project
-Welcome to the Ansible Project! This project is a comprehensive guide to implementing and harnessing the power of Ansible, an open-source automation platform. These hands-on labs cover a range of topics, from web server configuration to securing sensitive information using Ansible Vault.
+Welcome to the Ansible Project! This project is a comprehensive guide to implementing and harnessing the power of Ansible, an open-source automation platform. These hands-on labs cover a range of topics, from web server configuration to securing sensitive information using Ansible Vault, also yaml playbook to install sql on the managed host and create a database and new users using vault. 
 
 Ansible Playbooks for Web Server Configuration using Ansible Vault
 Overview
 I've enhanced my expertise in Ansible by creating playbooks—configurations that specify automation tasks. The primary focus is on configuring Nginx web servers, ensuring a consistent setup across various systems. Through deploying a sample website and implementing security measures, this project offers practical experience in automating web server configurations with Ansible.
+
+Ansible Playbook Setup MySQL DB, User, and Password using vault
+MySQL Configuration Playbook
+This Ansible playbook automates the setup of a MySQL database server. It installs the MySQL client and server, configures the root password, creates a specified database, and sets up a user with defined credentials. Easily customize your MySQL environment using variables such as root password, database name, and user credentials, using vault to encrypt database 
 
 Security with Ansible Vault
 Additionally, the project explores Ansible Vault, a feature ensuring secure storage and encryption for sensitive data in playbooks. The demonstration involves encrypting critical information, such as database passwords, showcasing how to bolster security and safeguard confidential data during automation. Seamlessly integrating encrypted data into an Ansible playbook allows for the automation of tasks while maintaining the confidentiality of sensitive information.
